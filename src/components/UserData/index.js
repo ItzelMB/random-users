@@ -8,9 +8,8 @@ class UserData extends Component {
 
     render(){
         return (
-            <div onClick={this.props.hideCard} className="max-w-sm relative bg-white  max-w-md m-auto flex-col flex border">
-                {/*<div onClick={this.props.hideCard} className="float-right">x</div>*/}
-                {/*<img src={this.props.user.picture.medium} alt="user" className="z-20 rounded-full"></img>*/}
+            <div onClick={this.props.hideCard} className="relative bg-white my-4 flex-col flex border w-64">
+                <div onClick={this.props.hideCard} className="font-bold text-right mr-4">&times;</div>
                 <img src={this.props.user.picture.large} alt="user" className="w-full"></img>
                 <div className="p-4 text-gray-800 text-base">
                     <p className="font-bold text-xl mb-4">{this.props.user.name.first} {this.props.user.name.last}</p>
