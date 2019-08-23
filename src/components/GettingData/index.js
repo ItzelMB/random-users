@@ -12,7 +12,7 @@ class GettingData extends Component {
 
     componentDidMount() {
 
-        fetch('https://randomuser.me/api/?results=30')
+        fetch('https://randomuser.me/api/?results=32')
             .then(function(response) {
                 return response.json();
             })

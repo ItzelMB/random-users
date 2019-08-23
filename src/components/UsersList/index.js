@@ -30,13 +30,13 @@ class UsersList extends Component {
     render(){
         return (
             <React.Fragment>
-                <div className="pin z-10 overflow-auto flex">
-                    {this.state.displayCard ? <UserData user={this.props.user} hideCard={this.hideCard}/> : null}
-                </div>
-                <button id={this.props.user.id.value} onClick={this.handleCards} className="flex w-full md:w-1/3 p-2 m-4 md:w-56 rounded-full hover:bg-gray-200 items-center">
+                <button id={this.props.user.id.value} onClick={this.handleCards} className="flex w-full md:w-1/3 lg:w-1/4 p-2 m-4 mx-auto md:w-56 rounded-full hover:bg-gray-200 items-center">
                     <img src={this.props.user.picture.thumbnail} alt="user" className="rounded-full mr-4"></img>
                     <p className="font-bold">{this.props.user.name.first} {this.props.user.name.last}</p>
                 </button>
+                <div className="absolute z-1 overflow-auto flex">
+                        {this.state.displayCard ? <UserData user={this.props.user} hideCard={this.hideCard}/> : null}
+                </div>
             </React.Fragment>
         );
     }

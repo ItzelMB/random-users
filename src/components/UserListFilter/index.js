@@ -25,7 +25,7 @@ class UserListFilter extends Component {
 
     render() {
         return (
-            <section className="show-users p-12">
+            <section className="show-users p-12 absolute z-0">
                 <h1 className="font-bold text-lg mb-4">Users</h1>
                 <p className="mb-8">If you want to get contact information to specific user, just select a group and then select him from the list below.</p>
                 <div className="flex">
