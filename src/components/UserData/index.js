@@ -9,6 +9,7 @@ class UserData extends Component {
     render(){
         return (
             <div>
+                <div onClick={this.props.hideCard}>x</div>
             'UserData'
             </div>
         );
