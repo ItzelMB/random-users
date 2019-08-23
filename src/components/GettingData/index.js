@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UsersList from '../UsersList'
+import UserListFilter from '../UserListFilter';
 
 class GettingData extends Component {
     constructor(props) {
@@ -27,13 +27,19 @@ class GettingData extends Component {
 
     render(){
         return (
-            <section className="container mx-auto flex flex-wrap">
-                {this.state.data === null ?
-                    <div>Loading</div>
-                :
-                    this.state.data.results.map( element => <UsersList user={element} /> )
-                }
-            </section>
+            <React.Fragment>
+                <div className="container flex flex-wrap">
+                    {this.state.data === null ?
+                        <div className="bg-blue-500 text-center text-white py-4 lg:px-4 w-1/2 mx-auto mt-10">
+                            <span>Loading</span>
+                        </div>
+                    :
+                        <React.Fragment>
+                            <UserListFilter list={this.state.data.results} />
+                        </React.Fragment>
+                    }
+                </div>
+            </React.Fragment>
         );
     }
 
