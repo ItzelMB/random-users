@@ -25,15 +25,18 @@ class UserListFilter extends Component {
 
     render() {
         return (
-            <section>
-                <h1>Users</h1>
-                <p>If you want to get contact information to specific user, just select a group and then select him from the list below.</p>
-                <select onChange={this.filterByGender.bind(this)}>
-                    <option value="all">See all</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <div>{this.state.filteredUserList.map( element => <UsersList user={element} /> )}</div>
+            <section className="show-users p-12">
+                <h1 className="font-bold text-lg mb-4">Users</h1>
+                <p className="mb-8">If you want to get contact information to specific user, just select a group and then select him from the list below.</p>
+                <div className="flex">
+                    <p className="font-bold text-sm mr-8">Select group of users</p>
+                    <select onChange={this.filterByGender.bind(this)} className="border w-40 text-gray-600 text-sm mb-12">
+                        <option value="all" selected>See all</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div className="users-list">{this.state.filteredUserList.map( element => <UsersList user={element} /> )}</div>
             </section>
         )
     };
