@@ -27,17 +27,16 @@ class GettingData extends Component {
 
     render(){
         return (
-            <div>
+            <section className="container mx-auto flex flex-wrap">
                 {this.state.data === null ?
                     <div>Loading</div>
                 :
                     this.state.data.results.map( element => <UsersList user={element} /> )
                 }
-            </div>
+            </section>
         );
     }
 
 };
 
 export default GettingData;
-
