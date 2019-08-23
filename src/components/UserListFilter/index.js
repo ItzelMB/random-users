@@ -36,7 +36,7 @@ class UserListFilter extends Component {
                         <option value="female">Female</option>
                     </select>
                 </div>
-                <div className="users-list">{this.state.filteredUserList.map( element => <UsersList user={element} /> )}</div>
+                <div className="users-list flex flex-wrap">{this.state.filteredUserList.map( element => <UsersList user={element} /> )}</div>
             </section>
         )
     };
